@@ -39,6 +39,15 @@ public class ConeccionBD {
 		
 		return instance;
 	}
+	public void cerrarConeccion() {
+		if(conn!= null) {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				System.out.println("Error al cerrar la BD");
+			}
+		}
+	}
 	public Connection getConnection() {
 		return this.conn;
 	}
