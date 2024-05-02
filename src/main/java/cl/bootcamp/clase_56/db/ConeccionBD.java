@@ -39,5 +39,8 @@ public class ConeccionBD {
 		
 		return instance;
 	}
+	public Connection getConnection() {
+		return this.conn;
+	}
 
 }
