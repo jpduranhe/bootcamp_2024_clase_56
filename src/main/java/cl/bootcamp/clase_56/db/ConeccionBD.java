@@ -3,6 +3,7 @@ package cl.bootcamp.clase_56.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ConeccionBD {
 	
@@ -38,6 +39,9 @@ public class ConeccionBD {
 		}
 		
 		return instance;
+	}
+	public Statement getStament() throws SQLException {
+		return this.conn.createStatement();
 	}
 	public void cerrarConeccion() {
 		if(conn!= null) {

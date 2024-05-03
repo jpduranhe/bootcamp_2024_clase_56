@@ -49,4 +49,14 @@
     <servlet-name>Tester4Servlet</servlet-name>
     <url-pattern>/Tester4Servlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PetownerServletList</display-name>
+    <servlet-name>PetownerServletList</servlet-name>
+    <servlet-class>cl.bootcamp.clase_56.PetownerServletList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PetownerServletList</servlet-name>
+    <url-pattern>/PetownerServletList</url-pattern>
+  </servlet-mapping>
 </web-app>
