@@ -29,4 +29,24 @@
     <servlet-name>Testet2Servlet</servlet-name>
     <url-pattern>/Testet2Servlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Tester3Servlet</display-name>
+    <servlet-name>Tester3Servlet</servlet-name>
+    <servlet-class>cl.bootcamp.clase_56.Tester3Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Tester3Servlet</servlet-name>
+    <url-pattern>/Tester3Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Tester4Servlet</display-name>
+    <servlet-name>Tester4Servlet</servlet-name>
+    <servlet-class>cl.bootcamp.clase_56.Tester4Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Tester4Servlet</servlet-name>
+    <url-pattern>/Tester4Servlet</url-pattern>
+  </servlet-mapping>
 </web-app>

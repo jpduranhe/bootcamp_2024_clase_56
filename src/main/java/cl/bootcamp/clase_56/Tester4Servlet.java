@@ -12,35 +12,34 @@ import java.sql.Statement;
 
 import cl.bootcamp.clase_56.db.ConeccionBD;
 
-
-public class Testet2Servlet extends HttpServlet {
-	private static final long serialVersionUID = 10000L;
+/**
+ * Servlet implementation class Tester4Servlet
+ */
+public class Tester4Servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
        
-   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			System.out.println("Ejecutando Servlet tester 2 ");
+			System.out.println("Ejecutando Servlet tester 3 ");
 			ConeccionBD objConeccionBD= ConeccionBD.getInstance();
 			Connection conn= objConeccionBD.getConnection();
 			Statement stmt = conn.createStatement();
 			
-			String insertPetOwner="insert into petowner (petowner_name,petowner_lastname,petowner_email)\n"
-								+ "values('Aaron','Rojas','aaron@mail.com')";
+			String deletePetOwner="delete from petowner  where petowner_id=9";
 			
-			int registrosAfectado=stmt.executeUpdate(insertPetOwner);
+			int registrosAfectado=stmt.executeUpdate(deletePetOwner);
 			
 			if(registrosAfectado==0){
-				response.getWriter().print("<p> Registro No insertado</p>");
+				response.getWriter().print("<p> Eliminacion fallida</p>");
 			}else {
-				response.getWriter().print("<p> Registro Guardado exitosamente</p>");
+				response.getWriter().print("<p> Eliminacion exitosa</p>");
 			}
 			
 			
 			
 		} catch (SQLException e) {
-			System.out.print("Upps!! algo fallo");;
+			System.out.print("Upps!! algo fallo");
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 }
